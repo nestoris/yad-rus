@@ -10,6 +10,7 @@ txt2po() # запихнуть строки обратно, но уже руси�
 }
 
 function getpo(){
+if(system("test -f uk.po")!=0){
 	cmd="curl -s https://raw.githubusercontent.com/v1cont/yad/master/po/uk.po"
 	#cmd="wget https://raw.githubusercontent.com/v1cont/yad/master/po/uk.po"
 	while((cmd|getline)>0){
@@ -18,7 +19,9 @@ function getpo(){
 	print ukpo > "uk.po"
 	close("uk.po")
 	close(cmd)
-	print "uk.po вроде, скачан.Проверь."
+	close(("test -f uk.po")
+}
+	print "uk.po вроде, скачан. Проверь."
 }
 
 function po2txt(	i){
