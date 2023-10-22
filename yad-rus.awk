@@ -59,6 +59,6 @@ function txt2po(	i){
 			print a[i][1] "\n" "msgid \"" a[i][2] "\"\n" "msgstr \"" a[i][3] "\"" (i<length(a)?"\n":"") > "ru.po"
 		}
 	}else{
-		print "Отменено"
+		print "Отмена"
 	}
 }
